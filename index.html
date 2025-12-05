@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>3D Solar System</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: black;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        #titleBar {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 0 0 15px white;
+        }
+
+        #planetLabel {
+            position: absolute;
+            top: 90px;
+            width: 100%;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        #planetInfo {
+            position: absolute;
+            right: 20px;
+            top: 120px;
+            width: 240px;
+            background: rgba(0,0,20,0.65);
+            padding: 20px;
+            border-radius: 12px;
+            display: none;
+        }
+
+        /* 🔥 UPDATED BUTTON STYLE — Black with white border */
+        #autoTourBtn {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+            padding: 12px 22px;
+            font-size: 20px;
+            background: black;             /* button is now black */
+            color: white;                  /* text stays white */
+            border: 2px solid white;       /* clean white outline */
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #autoTourBtn:hover {
+            background: #111;              /* subtle hover effect */
+        }
+
+        #controlsHint {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+
+    <!-- REQUIRED LIBRARIES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <div id="titleBar">3D Solar System</div>
+    <div id="planetLabel"></div>
+    <div id="planetInfo"></div>
+
+    <button id="autoTourBtn">Start Auto Tour</button>
+
+    <div id="controlsHint">
+        Left click: zoom • Right click: zoom out • T: auto tour toggle
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
